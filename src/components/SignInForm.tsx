@@ -51,6 +51,7 @@ const SignInForm = () => {
             console.log(result);
             if (result.status === "complete") {
                 await setActive({session:result.createdSessionId})
+                router.push("/dashboard")
             }else{
                 setAuthError("Sign In error")
             }
